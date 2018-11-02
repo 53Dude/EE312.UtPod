@@ -10,12 +10,20 @@
 
 using namespace std;
 
+//pre-conditions: none
+//purpose: Constructor for the default UTPod with no input
+//result: UTPod with no songs and 512 MB memory
+
 UtPod::UtPod(){
     
     memSize=MAX_MEMORY;
     songs=NULL;
     
 }
+
+//pre-conditions: none
+//purpose: Constructor for the default UTPod with input
+//result: UTPod with no songs and size MB memory
 
 UtPod::UtPod(int size){
     
@@ -26,6 +34,9 @@ UtPod::UtPod(int size){
     songs=NULL;
 }
 
+//pre-conditions: Song must have title, artist, and needs to fit in the UTPod's storage
+//purpose: Adds a song to UTPod if it fits
+//result: song is added to target UTPod
 
 int UtPod::addSong(Song const &s){
     
@@ -49,6 +60,10 @@ int UtPod::addSong(Song const &s){
     return SUCCESS;
     
 }
+
+//pre-conditions: target utpod must have songs
+//purpose: remove song s from the utpod
+//result: song s is no longer in utpod
 
 int UtPod::removeSong(Song const &s){
     
@@ -77,6 +92,10 @@ int UtPod::removeSong(Song const &s){
     
 }
 
+//pre-conditions: none
+//purpose: to shuffle songs in the utpod
+//result: shuffled utpod
+
 void UtPod::shuffle(){
     
 //cout << "shuffle" << endl;
@@ -95,15 +114,21 @@ void UtPod::shuffle(){
     
     if(working.size()==1)
         return;
-    int temp=1+rand()%(working.size()*3);
-    for(int i=0;i<temp;i++){
-        for(int s=0;s<(int)working.size();s++){
-            for(int e=(int)working.size()-1;e>0;e--){
-                tempSong=working[s];
-                working[s]=working[e];
-                working[e]=tempSong;
-            }
+    
+    //flips list a random amount of times, moving elements depending on random value
+    int temp=rand()%9;
+    for(int i=0;i<working.size()*temp;i++){
+        
+        int iOne=rand()%working.size();
+        int iTwo=rand()%working.size();
+        while(iOne==0||iTwo==0){
+            iOne=rand()%working.size();
+            iTwo=rand()%working.size();
         }
+        
+        tempSong=working[iOne];
+        working[iOne]=working[iTwo];
+        working[iTwo]=tempSong;
     }
     tempSN=songs;
     int i=0;
@@ -115,6 +140,10 @@ void UtPod::shuffle(){
     
 }
 
+//pre-conditions: none
+//purpose: prints list of songs to screen
+//result: songs printed to terminal
+
 void UtPod::showSongList(){
     
     if(songs==NULL){
@@ -125,12 +154,16 @@ void UtPod::showSongList(){
     while(ptr!=NULL){
         
         ptr->s.printSong("");
-        
         ptr=ptr->next;
         
     }
+    cout << endl;
     
 }
+
+//pre-conditions: none
+//purpose: sorts songs in list to be ordered by artist, then title, then size
+//result: sorted list
 
 void UtPod::sortSongList(){
     
@@ -174,6 +207,8 @@ void UtPod::sortSongList(){
     
 }
 
+//returns remaining memory of specific utpod
+
 int UtPod::getRemainingMemory(){
     
     SongNode *ptr=songs;
@@ -189,6 +224,8 @@ int UtPod::getRemainingMemory(){
     return memSize-taken;
     
 }
+
+//deconstructor for utpod
 
 UtPod::~UtPod(){
     

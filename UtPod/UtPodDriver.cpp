@@ -49,39 +49,57 @@ int main(int argc, const char * argv[]) {
     UtPod t;
     int result;
     
-    Song s1("Beatles", "Hey Jude1", 4);
+    Song s1("Beyonce", "Formation", 20);
     result=t.addSong(s1);
     cout << "Add song result: " << result << endl;
     
-    Song s2("Beatles", "Hey Jude2", 5);
+    Song s2("Beyonce", "Formation", 10);
     result=t.addSong(s2);
     cout << "Add song result: " << result << endl;
     
-    Song s3("Beatles", "Hey Jude3", 6);
+    Song s3("R Kelly", "Ignition (Remix)", 15);
     result=t.addSong(s3);
     cout << "Add song result: " << result << endl;
 
-    Song s4("Beatles", "Hey Jude4", 7);
+    Song s4("R Kelly", "Ignition", 9);
     result=t.addSong(s4);
     cout << "Add song result: " << result << endl;
 
-    Song s5("Beatles", "Hey Jude5", 241);
+    Song s5("Tyga", "Dip", 30);
     result=t.addSong(s5);
+    cout << "Add song result: " << result << endl;
+    
+    Song s6("Doja Cat", "Mooo!", 40);
+    result=t.addSong(s6);
+    cout << "Add song result: " << result << endl;
+    result=t.addSong(s6);
     cout << "Add song result: " << result << endl;
 
     
     
-    cout << "Songs" << endl;
+    cout << endl << "Songs" << endl;
     t.showSongList();
-    cout << "Shuffling" << endl;
+    
+    
+    cout << "Shuffling 1 /////////////////////" << endl;
     t.shuffle();
     cout << "Songs" << endl;
     t.showSongList();
-    cout << "Shuffling" << endl;
+    cout << "Shuffling 2 /////////////////////" << endl;
     t.shuffle();
     cout << "Songs" << endl;
     t.showSongList();
-    cout << "Sorting" << endl;
+    cout << "Shuffling 3 /////////////////////" << endl;
+    t.shuffle();
+    cout << "Songs" << endl;
+    t.showSongList();
+    cout << "Shuffling 4 /////////////////////" << endl;
+    t.shuffle();
+    
+    
+    cout << "Songs" << endl;
+    t.showSongList();
+    cout << "Sorting /////////////////////" << endl;
     t.sortSongList();
     cout << "Songs" << endl;
     t.showSongList();
@@ -93,6 +111,15 @@ int main(int argc, const char * argv[]) {
 
     cout << "Songs" << endl;
     t.showSongList();
+    cout << "Shuffling 5 /////////////////////" << endl;
+    t.shuffle();
+    cout << "Songs" << endl;
+    t.showSongList();
+    cout << "Sorting /////////////////////" << endl;
+    t.sortSongList();
+    cout << "Songs" << endl;
+    t.showSongList();
+    
     
     result=t.removeSong(s1);
     cout << "Remove song result: " << result << endl;

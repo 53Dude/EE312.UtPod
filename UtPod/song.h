@@ -28,7 +28,7 @@ public:
     Song(string titl,string arti,int siz);
     Song();
     
-    void dupeSong(Song *a, Song const &b);
+    //setters
     
     void setTitle(string titl) {
         title=titl;
@@ -40,6 +40,7 @@ public:
         size=siz;
     }
 
+    //getters
     
     string getTitle() const {
         return title;
@@ -51,12 +52,18 @@ public:
         return size;
     }
     
+    //operator overriders
+    
     bool operator >(Song const &rhs);
     bool operator <(Song const &rhs);
     bool operator ==(Song const &rhs);
     bool operator =(Song const &rhs);
     
+    //prints song to terminal
+    
     void printSong(string prefix);
+    
+    // not needed but still here
     
     ~Song();
     

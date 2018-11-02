@@ -10,6 +10,8 @@
 
 using namespace std;
 
+//song constructor with inputs
+
 Song::Song(string arti,string titl,int siz){
     
     title=titl;
@@ -17,6 +19,8 @@ Song::Song(string arti,string titl,int siz){
     size=siz;
     
 }
+
+//song constructor with no inputs
 
 Song::Song(){
     
@@ -26,17 +30,27 @@ Song::Song(){
     
 }
 
+//override > operator
+
 bool Song::operator >(Song const &rhs)
 {
-    if(artist < rhs.artist)
+    if(artist.compare(rhs.artist)>0)
+        return true;
+    else if(artist.compare(rhs.artist)<0)
         return false;
-    else if(title < rhs.title)
+    else if(title.compare(rhs.title)>0)
+        return true;
+    else if(title.compare(rhs.title)<0)
         return false;
+    else if(size > rhs.size)
+        return true;
     else if(size < rhs.size)
         return false;
     else
-        return true;
+        return false;
 }
+
+//override < operator
 
 bool Song::operator <(Song const &rhs)
 {
@@ -50,6 +64,8 @@ bool Song::operator <(Song const &rhs)
         return true;
 }
 
+//override == operator
+
 bool Song::operator ==(Song const &rhs)
 {
     if((artist == rhs.artist)&&(title == rhs.title)&&(size == rhs.size))
@@ -57,6 +73,8 @@ bool Song::operator ==(Song const &rhs)
     else
         return false;
 }
+
+//override = operator
 
 bool Song::operator =(Song const &rhs){
     
@@ -68,11 +86,15 @@ bool Song::operator =(Song const &rhs){
     
 }
 
+//prints song to terminal
+
 void Song::printSong(string prefix){
     
-    cout << prefix << title << ", by: " << artist << ", size: " << size << "MB" << endl;
+    cout << prefix << title << ", \tby: " << artist << ", \tsize: " << size << "MB" << endl;
     
 }
+
+//not needed but here anyway
 
 Song::~Song(){
     
