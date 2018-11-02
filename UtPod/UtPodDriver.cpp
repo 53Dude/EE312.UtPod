@@ -75,7 +75,7 @@ int main(int argc, const char * argv[]) {
     result=t.addSong(s6);
     cout << "Add song result: " << result << endl;
 
-    
+    cout << "memory = " << t.getRemainingMemory() << " MB" << endl;
     
     cout << endl << "Songs" << endl;
     t.showSongList();
@@ -104,11 +104,28 @@ int main(int argc, const char * argv[]) {
     cout << "Songs" << endl;
     t.showSongList();
     
+    
     result=t.removeSong(s2);
     cout << "Remove song result: " << result << endl;
     result=t.removeSong(s3);
     cout << "Remove song result: " << result << endl;
+    
+    cout << "memory = " << t.getRemainingMemory() << " MB" << endl;
+    
+    Song s7("Britney Spears", "Toxic", 150);
+    result=t.addSong(s7);
+    cout << "Add song result: " << result << endl;
+    
+    Song s8("Sheck Wes", "Mo Bamba", 150);
+    result=t.addSong(s8);
+    cout << "Add song result: " << result << endl;
+    
+    Song s9("Drake", "In My Feelings", 400);
+    result=t.addSong(s9);
+    cout << "Add song result: " << result << endl;
 
+    cout << "memory = " << t.getRemainingMemory() << " MB" << endl;
+    
     cout << "Songs" << endl;
     t.showSongList();
     cout << "Shuffling 5 /////////////////////" << endl;
@@ -127,6 +144,10 @@ int main(int argc, const char * argv[]) {
     cout << "Remove song result: " << result << endl;
     result=t.removeSong(s4);
     cout << "Remove song result: " << result << endl;
+    result=t.removeSong(s4);
+    cout << "Remove song result: " << result << endl;
+    
+    cout << "memory = " << t.getRemainingMemory() << " MB" << endl;
     
     cout << "Songs" << endl;
     t.showSongList();
@@ -134,11 +155,33 @@ int main(int argc, const char * argv[]) {
     result=t.addSong(s5);
     cout << "Add song result: " << result << endl;
     
+    cout << "memory = " << t.getRemainingMemory() << " MB" << endl;
+    
     cout << "Songs" << endl;
     t.showSongList();
-    cout << "memory = " << t.getRemainingMemory() << endl;
     
-    std::cout << "Hello, World!\n";
+    result=t.removeSong(s5);
+    cout << "Remove song result: " << result << endl;
+    result=t.removeSong(s7);
+    cout << "Remove song result: " << result << endl;
+    result=t.removeSong(s6);
+    cout << "Remove song result: " << result << endl;
+    result=t.removeSong(s6);
+    cout << "Remove song result: " << result << endl;
+    
+    cout << "Songs" << endl;
+    t.showSongList();
+    
+    cout << "memory = " << t.getRemainingMemory() << " MB" << endl;
+    
+    result=t.removeSong(s8);
+    cout << "Remove song result: " << result << endl;
+    
+    cout << "Songs" << endl;
+    t.showSongList();
+    
+    cout << "memory = " << t.getRemainingMemory() << " MB" << endl;
+//std::cout << "Hello, World!\n";
     return 0;
 }
 
