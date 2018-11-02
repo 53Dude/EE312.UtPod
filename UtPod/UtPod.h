@@ -12,6 +12,10 @@
 #include <stdio.h>
 #include <cstdlib>
 #include <iostream>
+#include <string>
+#include <ctime>
+#include <vector>
+#include "song.h"
 
 using namespace std;
 
@@ -37,6 +41,7 @@ private:
 public:
     UtPod();
     UtPod(int size);
+
     
     int addSong(Song const &s);
     int removeSong(Song const &s);

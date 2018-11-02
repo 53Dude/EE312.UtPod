@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E44A155421819A570014503E /* UtPodDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44A1539218191170014503E /* UtPodDriver.cpp */; };
-		E44A155E21819A8F0014503E /* utPod_driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44A1548218199500014503E /* utPod_driver.cpp */; };
+		E44380772181CEAA005B7058 /* UtPod.h in Sources */ = {isa = PBXBuildFile; fileRef = E44A1543218192150014503E /* UtPod.h */; };
+		E44380782181CEAA005B7058 /* song.h in Sources */ = {isa = PBXBuildFile; fileRef = E44A1546218192360014503E /* song.h */; };
+		E443807B2181D38C005B7058 /* DEMO_Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E443807A2181D38C005B7058 /* DEMO_Driver.cpp */; };
+		E44A158D2181B15D0014503E /* UtPodDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44A1539218191170014503E /* UtPodDriver.cpp */; };
+		E44A158E2181B19C0014503E /* UtPod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44A1542218192150014503E /* UtPod.cpp */; };
+		E44A158F2181B19C0014503E /* song.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44A1545218192360014503E /* song.cpp */; };
+		E44A159B2181B1FE0014503E /* UtPod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44A1542218192150014503E /* UtPod.cpp */; };
+		E44A159C2181B1FE0014503E /* song.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44A1545218192360014503E /* song.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,7 +27,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		E44A155921819A790014503E /* CopyFiles */ = {
+		E44A15922181B1F00014503E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -33,14 +39,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E443807A2181D38C005B7058 /* DEMO_Driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DEMO_Driver.cpp; sourceTree = "<group>"; };
 		E44A1539218191170014503E /* UtPodDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UtPodDriver.cpp; sourceTree = "<group>"; };
 		E44A1542218192150014503E /* UtPod.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UtPod.cpp; sourceTree = "<group>"; };
 		E44A1543218192150014503E /* UtPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtPod.h; sourceTree = "<group>"; };
 		E44A1545218192360014503E /* song.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = song.cpp; sourceTree = "<group>"; };
 		E44A1546218192360014503E /* song.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = song.h; sourceTree = "<group>"; };
-		E44A1548218199500014503E /* utPod_driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utPod_driver.cpp; sourceTree = "<group>"; };
 		E44A154D218199E90014503E /* UtPod */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UtPod; sourceTree = BUILT_PRODUCTS_DIR; };
-		E44A155D21819A790014503E /* DEMO UtPod */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DEMO UtPod"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44A15942181B1F00014503E /* DEMO_utPod */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DEMO_utPod; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +57,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E44A155821819A790014503E /* Frameworks */ = {
+		E44A15912181B1F00014503E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				E44A154D218199E90014503E /* UtPod */,
-				E44A155D21819A790014503E /* DEMO UtPod */,
+				E44A15942181B1F00014503E /* DEMO_utPod */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,11 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				E44A1542218192150014503E /* UtPod.cpp */,
+				E443807A2181D38C005B7058 /* DEMO_Driver.cpp */,
 				E44A1543218192150014503E /* UtPod.h */,
 				E44A1539218191170014503E /* UtPodDriver.cpp */,
 				E44A1545218192360014503E /* song.cpp */,
 				E44A1546218192360014503E /* song.h */,
-				E44A1548218199500014503E /* utPod_driver.cpp */,
 			);
 			path = UtPod;
 			sourceTree = "<group>";
@@ -111,21 +117,21 @@
 			productReference = E44A154D218199E90014503E /* UtPod */;
 			productType = "com.apple.product-type.tool";
 		};
-		E44A155521819A790014503E /* DEMO UtPod */ = {
+		E44A15932181B1F00014503E /* DEMO_utPod */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E44A155A21819A790014503E /* Build configuration list for PBXNativeTarget "DEMO UtPod" */;
+			buildConfigurationList = E44A15982181B1F00014503E /* Build configuration list for PBXNativeTarget "DEMO_utPod" */;
 			buildPhases = (
-				E44A155621819A790014503E /* Sources */,
-				E44A155821819A790014503E /* Frameworks */,
-				E44A155921819A790014503E /* CopyFiles */,
+				E44A15902181B1F00014503E /* Sources */,
+				E44A15912181B1F00014503E /* Frameworks */,
+				E44A15922181B1F00014503E /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "DEMO UtPod";
-			productName = UtPod;
-			productReference = E44A155D21819A790014503E /* DEMO UtPod */;
+			name = DEMO_utPod;
+			productName = DEMO_utPod;
+			productReference = E44A15942181B1F00014503E /* DEMO_utPod */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -138,6 +144,9 @@
 				ORGANIZATIONNAME = "Guy Co.";
 				TargetAttributes = {
 					E44A154C218199E90014503E = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E44A15932181B1F00014503E = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -155,7 +164,7 @@
 			projectRoot = "";
 			targets = (
 				E44A154C218199E90014503E /* UtPod */,
-				E44A155521819A790014503E /* DEMO UtPod */,
+				E44A15932181B1F00014503E /* DEMO_utPod */,
 			);
 		};
 /* End PBXProject section */
@@ -165,15 +174,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44A155421819A570014503E /* UtPodDriver.cpp in Sources */,
+				E44A158E2181B19C0014503E /* UtPod.cpp in Sources */,
+				E44A158F2181B19C0014503E /* song.cpp in Sources */,
+				E44A158D2181B15D0014503E /* UtPodDriver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E44A155621819A790014503E /* Sources */ = {
+		E44A15902181B1F00014503E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44A155E21819A8F0014503E /* utPod_driver.cpp in Sources */,
+				E443807B2181D38C005B7058 /* DEMO_Driver.cpp in Sources */,
+				E44380772181CEAA005B7058 /* UtPod.h in Sources */,
+				E44380782181CEAA005B7058 /* song.h in Sources */,
+				E44A159B2181B1FE0014503E /* UtPod.cpp in Sources */,
+				E44A159C2181B1FE0014503E /* song.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,20 +324,24 @@
 			};
 			name = Release;
 		};
-		E44A155B21819A790014503E /* Debug */ = {
+		E44A15992181B1F00014503E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUEM785YN3;
+				GCC_REUSE_STRINGS = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		E44A155C21819A790014503E /* Release */ = {
+		E44A159A2181B1F00014503E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUEM785YN3;
+				GCC_REUSE_STRINGS = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -348,11 +367,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E44A155A21819A790014503E /* Build configuration list for PBXNativeTarget "DEMO UtPod" */ = {
+		E44A15982181B1F00014503E /* Build configuration list for PBXNativeTarget "DEMO_utPod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E44A155B21819A790014503E /* Debug */,
-				E44A155C21819A790014503E /* Release */,
+				E44A15992181B1F00014503E /* Debug */,
+				E44A159A2181B1F00014503E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DEMO UtPod.xcscheme</key>
+		<key>DEMO_utPod.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -22,7 +22,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>E44A154C218199E90014503E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E44A155521819A790014503E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E44A15932181B1F00014503E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

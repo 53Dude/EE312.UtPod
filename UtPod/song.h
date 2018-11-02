@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <cstdlib>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -25,6 +26,9 @@ private:
     
 public:
     Song(string titl,string arti,int siz);
+    Song();
+    
+    void dupeSong(Song *a, Song const &b);
     
     void setTitle(string titl) {
         title=titl;
@@ -35,17 +39,24 @@ public:
     void setSize(int siz) {
         size=siz;
     }
+
     
-    
-    int getTitle() {
+    string getTitle() const {
         return title;
     }
-    int getArtist() {
+    string getArtist() const {
         return artist;
     }
-    int getSize() {
+    int getSize() const {
         return size;
     }
+    
+    bool operator >(Song const &rhs);
+    bool operator <(Song const &rhs);
+    bool operator ==(Song const &rhs);
+    bool operator =(Song const &rhs);
+    
+    void printSong(string prefix);
     
     ~Song();
     

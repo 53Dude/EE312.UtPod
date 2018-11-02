@@ -1,4 +1,4 @@
-/* utPod_driver.cpp
+/* DEMO_Driver.cpp
  Demo Driver for the UtPod.
  
  Roger Priebe
@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <cstdlib>
 #include <iostream>
-#include "Song.h"
+#include "song.h"
 #include "UtPod.h"
 
 using namespace std;
@@ -81,3 +81,5 @@ int main(int argc, const char * argv[]) {
     std::cout << "Hello, World!\n";
     return 0;
 }
+
+
